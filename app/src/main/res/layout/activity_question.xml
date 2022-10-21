@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_purple"
+    tools:context=".Quiz.QuestionActivity">
+
+    <RelativeLayout
+        android:id="@+id/questionContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp">
+
+        <ImageView
+            android:id="@+id/questionMarkIcon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/question_mark_icon"
+            app:tint="@color/white" />
+
+        <cn.gavinliu.android.lib.shapedimageview.ShapedImageView
+            android:id="@+id/ivQuestionImage"
+            android:layout_width="200dp"
+            android:background="@android:color/transparent"
+            android:layout_height="100dp"
+            android:layout_below="@id/questionMarkIcon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/balltest_q1_image"
+            android:visibility="visible"
+            app:round_radius="30dp"
+            app:shape_mode="round_rect"
+            app:stroke_color="@color/yellow"
+            app:stroke_width="2dp" />
+
+        <TextView
+            android:id="@+id/tvQuestionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivQuestionImage"
+            android:text="Question text example LOREM IPSUM LOREM IPSUM LOREM"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+            android:id="@+id/pbQuestionProgress"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_below="@id/tvQuestionText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            app:rcAnimationEnable="true"
+            app:rcBackgroundColor="@color/midnight_blue"
+            app:rcBackgroundPadding="0dp"
+            app:rcMax="100"
+            app:rcProgress="0"
+            app:rcProgressColor="#feca57"
+            app:rcRadius="20dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/optionsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/questionContainer"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/panel_white_round_top_30"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tvFirstOption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/question_option"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="option_1"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvSecondOption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvFirstOption"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/question_option"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="option_2"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvThirdOption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvSecondOption"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/question_option"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="option_3"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvFourthOption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvThirdOption"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/question_option"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="option_4"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/submit"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/button_question_round_30"
+        android:padding="20dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/test_next_question_icon"
+        android:text="Submit"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:tint="@color/white" />
+</RelativeLayout>

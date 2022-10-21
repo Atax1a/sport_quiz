@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/testContainer"
+    android:layout_width="match_parent"
+    android:layout_height="170dp">
+
+    <RelativeLayout
+        android:id="@+id/testPanelContainer"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/panel_test_gradient_7">
+
+        <ImageView
+            android:id="@+id/ivPassedIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/test_not_passed_icon"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/tvTestCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivPassedIcon"
+            android:layout_marginStart="20dp"
+            android:text=":testCategory"
+            android:textColor="@color/gray" />
+
+        <TextView
+            android:id="@+id/tvTestName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTestCategory"
+            android:layout_marginStart="20dp"
+            android:text=":testName"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTestName"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp">
+
+            <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                android:id="@+id/pbQuestionProgress"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@id/tvQuestionsCount"
+                app:rcAnimationEnable="true"
+                app:rcBackgroundColor="@color/midnight_blue"
+                app:rcBackgroundPadding="0dp"
+                app:rcMax="100"
+                app:rcProgress="0"
+                app:rcProgressColor="@color/amethyst"
+                app:rcRadius="20dp" />
+
+            <TextView
+                android:id="@+id/tvQuestionsCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:text="20/20"
+                android:textStyle="bold"
+                android:textColor="@color/midnight_blue" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ivTestImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/main_basketball_icon" />
+
+</RelativeLayout>
